@@ -1,0 +1,29 @@
+server:
+  port: 10011
+
+logging:
+  file: C:/RCI/logs/project_manager_service.log
+  level:
+    root: ERROR
+    com:
+      fsd: INFO
+    org:
+      hibernate:
+        SQL: ERROR
+        type:
+          descriptor:
+            sql:
+              BasicBinder: ERROR
+
+spring:
+  application:
+    name: project-manager-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
