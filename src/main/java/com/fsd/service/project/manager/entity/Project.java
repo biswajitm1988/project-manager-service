@@ -41,4 +41,8 @@ public class Project {
     @JoinColumn(name = "USER_ID", referencedColumnName = "USER_ID")
     private User user;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "PROJECT_ID", insertable = false, updatable = false)
+    private List<Task> tasks;
+
 }
